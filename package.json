@@ -1,0 +1,24 @@
+{
+  "name": "businesses",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "deploy": "npm run migrate && wrangler deploy",
+    "start": "wrangler dev",
+    "generate-migrations": "drizzle-kit generate:sqlite --schema=./src/schema.ts",
+    "migrate": "wrangler d1 migrations apply businesses",
+    "migrate-local": "wrangler d1 migrations apply businesses --local"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20230419.0",
+    "drizzle-kit": "^0.19.13",
+    "typescript": "^5.0.4",
+    "wrangler": "^3.0.0"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
+    "d1-console": "^1.4.8",
+    "drizzle-orm": "^0.28.6",
+    "openai": "^4.12.4"
+  }
+}

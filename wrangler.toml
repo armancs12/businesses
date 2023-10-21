@@ -1,0 +1,9 @@
+name = "businesses"
+main = "src/worker.ts"
+compatibility_date = "2023-10-16"
+
+[[d1_databases]]
+binding = "DATABASE"
+database_name = "businesses"
+database_id = "27464352-0796-4113-8aec-84701badbf9a"
+migrations_dir = "drizzle"
