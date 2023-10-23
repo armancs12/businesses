@@ -2,6 +2,9 @@ name = "businesses"
 main = "src/worker.ts"
 compatibility_date = "2023-10-16"
 
+[triggers]
+crons = ["* * * * *"] # Run every minute
+
 [[d1_databases]]
 binding = "DATABASE"
 database_name = "businesses"
